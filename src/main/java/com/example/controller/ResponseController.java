@@ -19,14 +19,14 @@ public class ResponseController {
 
     @PostMapping
     public ResponseEntity<?> submitResponse(@PathVariable String formSlug, @RequestBody Response response) {
-        response.setFormId(formSlug); // Simulasi penyimpanan formId
+        response.setFormId(formSlug); 
         Response submittedResponse = responseService.submitResponse(response);
         return ResponseEntity.ok(Map.of("message", "Submit response success", "response", submittedResponse));
     }
 
     @GetMapping
     public ResponseEntity<?> getAllResponses(@PathVariable String formSlug) {
-        List<Response> responses = responseService.getAllResponses(formSlug); // Ganti dengan formId yang sebenarnya
+        List<Response> responses = responseService.getAllResponses(formSlug); 
         return ResponseEntity.ok(Map.of("message", "Get responses success", "responses", responses));
     }
 }

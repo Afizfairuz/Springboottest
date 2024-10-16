@@ -5,8 +5,8 @@ public class Question {
     private Long formId;
     private String name;
     private String choiceType;
-    private String choices; // Comma-separated choices for multiple choice, dropdown, checkboxes
+    private String choices; 
     private boolean isRequired;
 
-    // Constructors, Getters, and Setters
+    
 }

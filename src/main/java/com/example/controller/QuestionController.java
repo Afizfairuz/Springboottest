@@ -18,7 +18,7 @@ public class QuestionController {
 
     @PostMapping
     public ResponseEntity<?> addQuestion(@PathVariable String formSlug, @RequestBody Question question) {
-        question.setFormId(formSlug); // Simulasi penyimpanan formId
+        question.setFormId(formSlug); 
         Question addedQuestion = questionService.addQuestion(question);
         return ResponseEntity.ok(Map.of("message", "Add question success", "question", addedQuestion));
     }
